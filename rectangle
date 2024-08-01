@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class rectangle{
+ double width;
+ double height;
+ public rectangle(){
+ width=15;
+ height=8;
+ }
+ public rectangle(double w,double h){
+  this.width=w;
+  this.height=h;
+ }
+ double getArea(){
+   return width*height;
+   }
+ double getPerimeter(){
+   return 2*(width+height);
+ }
+ }
+ class driver{
+  public static void main(String args[]){                                                                                          
+   Scanner in=new Scanner(System.in);
+   double w=in.nextDouble();
+   double h=in.nextDouble(); 
+   double area,perimeter;
+   rectangle obj=new rectangle();
+   rectangle obj2=new rectangle(w,h);
+   area=obj.getArea();
+   perimeter=obj.getPerimeter();
+   System.out.println(area+" "+perimeter);
+   area=obj2.getArea();
+   perimeter=obj2.getPerimeter();
+   System.out.println(area+" "+perimeter);
+  }
+ }
